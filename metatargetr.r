@@ -3,7 +3,7 @@
 library(readr)
 library(dplyr)
 library(purrr)
-library(metagargetr)
+library(metatargetr)
 # https://favstats.github.io/metatargetr/
 
 # Meta Ad Library ####
@@ -28,6 +28,8 @@ targeting_uk <- map_df(ids,
                                        timeframe = "LAST_7_DAYS"))
 
 glimpse(targeting_uk)
+
+write_csv(targeting_uk, "./targeting_uk.csv")
 
 # Google ####
 # https://adstransparency.google.com
